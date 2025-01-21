@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="app">
+        <h1>SpendWise</h1>
+      
+        <!-- Dark Mode Toggle -->
+        <div class="theme-toggle">
+          <label>
+            <input type="checkbox" id="theme-toggle" />
+            Dark Mode
+          </label>
+        </div>
+      
+        <!-- Balance Display -->
+        <div class="balance">
+          <h2>Current Balance: ₹<span id="balance">0.00</span></h2>
+          <p>Total Income: ₹<span id="income">0.00</span></p>
+          <p>Total Expenses: ₹<span id="expenses">0.00</span></p>
+        </div>
+      
+        <!-- Transaction Form -->
+        <form id="transaction-form">
+          <input type="text" id="name" placeholder="Transaction Name" required />
+          <input type="number" id="amount" placeholder="Amount" required />
+          <select id="category">
+            <option value="salary">Salary</option>
+            <option value="rent">Rent</option>
+            <option value="groceries">Groceries</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="other">Other</option>
+          </select>
+          <select id="type">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+          </select>
+          <button type="submit">Add Transaction</button>
+        </form>
+      
+        <!-- Transaction History -->
+        <h3>Transaction History</h3>
+        <ul id="transaction-list"></ul>
+      
+        <!-- Summary Table -->
+        <h3>Expense & Income Summary</h3>
+        <table id="summary-table">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Income (₹)</th>
+              <th>Expense (₹)</th>
+            </tr>
+          </thead>
+          <tbody id="summary-body"></tbody>
+        </table>
+      </div>
+      
+</body>
+
+</html>
